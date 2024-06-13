@@ -1,1 +1,1 @@
-# front-end-course
+# Repository for educational purposes
