@@ -1,26 +1,28 @@
 export const Prompt = {
-    questions: {},
-    answers: {},
+    instance: null,
     getPromptAnswer: ((question) => {
         return prompt(question);
     }),
     getAnswersFromPrompts: (() => {
-        for (const [questionTag, question] of Object.entries(Prompt.questions)) {
-            let answer = Prompt.getPromptAnswer(question.prompt);
+        for (const [questionTag, question] of Object.entries(Prompt.instance.questions)) {
+            let answer = Prompt.instance.getPromptAnswer(question.prompt);
 
             while (answer === '') {
-                answer = Prompt.getPromptAnswer(question.prompt);
+                answer = Prompt.instance.getPromptAnswer(question.prompt);
             }
 
-            Prompt.answers[questionTag] = answer;
+            Prompt.instance.answers[questionTag] = answer;
         }
     }),
     getAnswers: (() => {
-        return Prompt.answers;
+        return Prompt.instance.answers;
     }),
     init: ((questions) => {
-        Prompt.questions = questions;
+        Prompt.instance = Object.create(Prompt);
 
-        return Prompt;
+        Prompt.instance.questions = questions;
+        Prompt.instance.answers = {};
+
+        return Prompt.instance;
     }),
 };
