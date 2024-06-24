@@ -9,7 +9,6 @@ export const PromptQuestionAnswer = {
             "prompt": "What is Your name?",
         },
     },
-    answers: {},
     compose: (() => {
         let output = '';
 
