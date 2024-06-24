@@ -1,8 +1,9 @@
 const path = require('path');
-const distDir = path.resolve(__dirname, 'homework_3/dist');
+const distDir = path.resolve(__dirname, './dist');
+const helpersDir = path.resolve(__dirname, './src/js/helpers/');
 
 module.exports = {
-    entry: './homework_3/src/js/index.js',
+    entry: './src/js/index.js',
     mode: 'development',
     output: {
         filename: 'main.js',
@@ -40,5 +41,10 @@ module.exports = {
                 ]
             }
         ]
+    },
+    resolve: {
+        alias: {
+            Helpers: helpersDir
+        }
     }
 };

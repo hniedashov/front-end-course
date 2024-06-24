@@ -1,7 +1,10 @@
+import {Prompt} from "Helpers/Prompt";
+
 export const BioComposer = {
     outputContainerIdentifier: "bio-container",
     buttonIdentifier: "bio-init",
     button: null,
+    prompt: null,
     questionsWithPhrases: {
         "name": {
             "prompt": "What is Your name?",
@@ -16,26 +19,11 @@ export const BioComposer = {
             "phrase": "from",
         },
     },
-    answers: {},
-    getPromptAnswer: ((question) => {
-        return prompt(question);
-    }),
-    getAnswersFromPrompts: (() => {
-        for (const [questionTag, question] of Object.entries(BioComposer.questionsWithPhrases)) {
-            let answer = BioComposer.getPromptAnswer(question.prompt);
-
-            while (answer === '') {
-                answer = BioComposer.getPromptAnswer(question.prompt);
-            }
-
-            BioComposer.answers[questionTag] = answer;
-        }
-    }),
     compose: (() => {
         let output = '';
         let space = '';
 
-        for (const [index, [answerTag, answer]] of Object.entries(Object.entries(BioComposer.answers))) {
+        for (const [index, [answerTag, answer]] of Object.entries(Object.entries(BioComposer.prompt.answers))) {
 
             if (index !== '0') {
                 space = ' ';
@@ -58,7 +46,8 @@ export const BioComposer = {
         BioComposer.button = document.getElementById(BioComposer.buttonIdentifier);
 
         BioComposer.button.addEventListener('click', (event) => {
-            BioComposer.getAnswersFromPrompts();
+            BioComposer.prompt = Prompt.init(BioComposer.questionsWithPhrases);
+            BioComposer.prompt.getAnswersFromPrompts();
 
             BioComposer.display(BioComposer.compose());
         });
