@@ -39,7 +39,7 @@ export const BioComposer = {
         return output;
     }),
     display: ((bio) => {
-        document.querySelector('.card').classList.remove('d-none');
+        document.querySelector('.personal-bio-card').classList.remove('d-none');
         document.getElementById(BioComposer.outputContainerIdentifier).innerHTML = bio;
     }),
     init: (() => {
