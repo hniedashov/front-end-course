@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homework 3</title>
+</head>
+<body>
+<div class="container py-4 px-3 mx-auto">
+    <div class="row">
+        <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-homework-3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-homework-3" type="button" role="tab" aria-controls="v-pills-homework-3" aria-selected="true">Homework 3</button>
+                <button class="nav-link" id="v-pills-homework-4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-homework-4" type="button" role="tab" aria-controls="v-pills-homework-4" aria-selected="false">Homework 4</button>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-homework-3" role="tabpanel" aria-labelledby="v-pills-homework-3-tab">
+                    <section>
+                        <div class="row">
+                            <h1 class="mb-5">Task 3.1</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary" id="types-list-init">Output JavaScript types</button>
+                            </div>
+                            <div class="col-6" id="types-list-container">
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="hr mt-5 mb-5"/>
+                    <section>
+                        <div class="row">
+                            <h1 class="mb-5">Task 3.2</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary" id="bio-init">Collect bio information</button>
+                            </div>
+                            <div class="col-6">
+                                <div class="card d-none personal-bio-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Personal bio</h5>
+                                        <p class="card-text" id="bio-container"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="hr mt-5 mb-5"/>
+                    <section>
+                        <div class="row">
+                            <h1 class="mb-5">Task 3.3</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <form>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Type in some number</span>
+                                        </div>
+                                        <input type="number" class="form-control" aria-label="Type in some number" id="splitter-input">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-6" id="splitter-container">
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="tab-pane fade" id="v-pills-homework-4" role="tabpanel" aria-labelledby="v-pills-homework-4-tab">
+                    <section>
+                        <div class="row">
+                            <h1 class="mb-5">Task 4.1</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary" id="question-answer-init">Ask name</button>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="hr mt-5 mb-5"/>
+                    <section>
+                        <div class="row">
+                            <h1 class="mb-5">Task 4.2</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <form>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Type in some number</span>
+                                        </div>
+                                        <input type="number" class="form-control" aria-label="Type in some number" id="number-checker-input" min="0" step="1">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-6">
+                                <div class="card number-checker-card d-none">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Number analysis</h5>
+                                        <p class="card-text" id="number-checker-container"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="hr mt-5 mb-5"/>
+                    <section>
+                        <div class="row">
+                            <h1 class="mb-5">Task 4.3</h1>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-primary" id="customer-info-init">Ask customer information</button>
+                                </div>
+                                <div class="col-6">
+                                    <div class="card customer-info-card d-none">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Customer Information</h5>
+                                            <p class="card-text" id="customer-info-container"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
