@@ -9,22 +9,22 @@ export const Functions = {
 
         return Functions.removeItemsFromString(text, symbols.split(''));
     }),
+    replaceItem: ((string, item) => {
+        return string.replace(new RegExp(`${item.toLowerCase()}|${item.toUpperCase()}`, "g"), '');
+    }),
     removeItemsFromString: ((string, itemsToRemove) => {
-        function replace(string, item) {
-            return string.replace(new RegExp(`${item.toLowerCase()}|${item.toUpperCase()}`, "g"), '');
-        }
 
         if (Array.isArray(itemsToRemove)) {
             let temp = string;
 
             for (let item of itemsToRemove) {
-                temp = replace(temp, item);
+                temp = Functions.replaceItem(temp, item);
             }
 
             return temp;
         }
 
-        return replace(string, itemsToRemove);
+        return Functions.replaceItem(string, itemsToRemove);
     }),
     findArithmeticMean: ((array) => {
         let filteredArray;
