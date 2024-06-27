@@ -47,7 +47,7 @@ export const Functions = {
             return ;
         }
 
-        return array.splice(index, 1);
+        array.splice(index, 1);
     }),
     init: (() => {
         console.log("Clear string received from prompt : ", Functions.clearStringFromCustomer());
