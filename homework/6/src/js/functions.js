@@ -40,6 +40,15 @@ export const Functions = {
     removeItemFromArray: ((array, item) => {
         return array.filter(arrayItem => arrayItem !== item);
     }),
+    removeItemFromArrayWithMutation: ((array, item) => {
+        const index = array.indexOf(item);
+
+        if (index === -1) {
+            return ;
+        }
+
+        return array.splice(index, 1);
+    }),
     init: (() => {
         console.log("Clear string received from prompt : ", Functions.clearStringFromCustomer());
         console.log("Find arithmetic mean : ", Functions.findArithmeticMean(['1', '22', 'asdsad', '23dsd', {}, [], 1, 2]));
