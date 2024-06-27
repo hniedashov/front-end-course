@@ -41,8 +41,8 @@ export const Functions = {
         return array.filter(arrayItem => arrayItem !== item);
     }),
     init: (() => {
-        console.log(Functions.clearStringFromCustomer());
-        console.log(Functions.findArithmeticMean(['1', '22', 'asdsad', '23dsd', {}, [], 1, 2]));
-        console.log(Functions.removeItemFromArray(['1', 1, 1, '11', 11, 22], 1));
+        console.log("Clear string received from prompt : ", Functions.clearStringFromCustomer());
+        console.log("Find arithmetic mean : ", Functions.findArithmeticMean(['1', '22', 'asdsad', '23dsd', {}, [], 1, 2]));
+        console.log("Remove items from array : ", Functions.removeItemFromArray(['1', 1, 1, '11', 11, 22], 1));
     }),
 };
